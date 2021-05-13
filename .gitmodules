@@ -1,0 +1,7 @@
+[submodule "Paper"]
+        path = Paper
+        url = https://github.com/PaperMC/Paper.git
+        branch = origin/master
+[submodule "Purpur"]
+	path = Purpur
+	url = https://github.com/pl3xgaming/Purpur.git

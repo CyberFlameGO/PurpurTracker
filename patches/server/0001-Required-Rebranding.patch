@@ -1,0 +1,34 @@
+From 0000000000000000000000000000000000000000 Mon Sep 17 00:00:00 2001
+From: Ben Kerllenevich <me@notom3ga.me>
+Date: Thu, 13 May 2021 18:51:52 -0400
+Subject: [PATCH] Required Rebranding
+
+
+diff --git a/src/main/java/com/destroystokyo/paper/PaperVersionFetcher.java b/src/main/java/com/destroystokyo/paper/PaperVersionFetcher.java
+index b9c5479e5561f8fe68ea8f94fbf4e64de8a53bf9..3691ecbee53b3d644fca967e2406240baea380d2 100644
+--- a/src/main/java/com/destroystokyo/paper/PaperVersionFetcher.java
++++ b/src/main/java/com/destroystokyo/paper/PaperVersionFetcher.java
+@@ -28,8 +28,8 @@ public class PaperVersionFetcher implements VersionFetcher {
+     @Nonnull
+     @Override
+     public Component getVersionMessage(@Nonnull String serverVersion) {
+-        String[] parts = serverVersion.substring("git-Airplane-".length()).split("[-\\s]"); // Tuinity
+-        final Component updateMessage = getUpdateStatusMessage("TECHNOVE/Airplane", GITHUB_BRANCH_NAME, parts[0]); // Tuinity
++        String[] parts = serverVersion.substring("git-PurpurTracker-".length()).split("[-\\s]"); // Tuinity // PurpurTracker
++        final Component updateMessage = getUpdateStatusMessage("notOM3GA/PurpurTracker", GITHUB_BRANCH_NAME, parts[0]); // Tuinity // PurpurTracker
+         final Component history = getHistory();
+ 
+         return history != null ? TextComponent.ofChildren(updateMessage, Component.newline(), history) : updateMessage;
+diff --git a/src/main/java/org/bukkit/craftbukkit/util/Versioning.java b/src/main/java/org/bukkit/craftbukkit/util/Versioning.java
+index 191f5331f0c7871f80f0da9cc38345ce33353577..7d854124d29c33ebf4b2e67e7dc4564808ad18cc 100644
+--- a/src/main/java/org/bukkit/craftbukkit/util/Versioning.java
++++ b/src/main/java/org/bukkit/craftbukkit/util/Versioning.java
+@@ -11,7 +11,7 @@ public final class Versioning {
+     public static String getBukkitVersion() {
+         String result = "Unknown-Version";
+ 
+-        InputStream stream = Bukkit.class.getClassLoader().getResourceAsStream("META-INF/maven/net.pl3x.purpur/purpur-api/pom.properties"); // Tuinity // Airplane // Purpur
++        InputStream stream = Bukkit.class.getClassLoader().getResourceAsStream("META-INF/maven/me.notom3ga/purpurtracker-api/pom.properties"); // Tuinity // Airplane // Purpur // PurpurTracker
+         Properties properties = new Properties();
+ 
+         if (stream != null) {
